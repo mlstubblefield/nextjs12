@@ -7,6 +7,6 @@ export default function TbtFast(){
 
     return <>
         <div>Hi!</div>
-        {Array(1000).map((_,key) => <Suspense key={key} fallback="loadin'..."><SlowComponent/></Suspense>)}
+        {[...Array(1000).keys()].map((_,key) => <Suspense key={key} fallback="loadin'..."><SlowComponent/></Suspense>)}
     </>
 }
